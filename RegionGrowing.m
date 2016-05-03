@@ -62,12 +62,12 @@ imshow(Coinage),title 'Coinage';
 x = int64(x);    % sets the x y to be integers, for use later
 y=int64(y);
 
-setGlobalx(Coinage); %set the global variable of the image to be used
+setImage(Coinage); % function to set the global variable of the image to be used
     
 thresVal = Coinage(y,x); %get the intensity value of the seed pixel.
 checkThisPixel(Coinage,x,y,thresVal); % call the recursive algorithm.
 
-showme = getImage;
+showme = getImage; % function to get the global var image
 figure, imshow(showme),title 'finished region grow';
 
 
